@@ -184,3 +184,86 @@ color:white;
 font-size:25px;
 margin:0 10px;
 }
+/* CSS Variables */
+:root{
+  --primary:#2563eb;
+  --dark:#081326;
+  --light:#f5f7fa;
+  --white:#ffffff;
+  --shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Smooth Scroll */
+html{
+  scroll-behavior:smooth;
+}
+
+/* Skills Grid */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:25px;
+}
+
+/* Projects Grid */
+.project-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+/* Card Effects */
+.skill-card,
+.project-card{
+  background:white;
+  border-radius:15px;
+  box-shadow:var(--shadow);
+}
+
+.skill-card:hover,
+.project-card:hover{
+  transform:translateY(-10px);
+  transition:0.3s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Gradient Name */
+.hero-text span{
+  background:linear-gradient(90deg,#3b82f6,#60a5fa);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+.hero{
+  flex-direction:column;
+  text-align:center;
+}
+
+.hero-text{
+  width:100%;
+}
+
+.hero-image img{
+  width:250px;
+  margin-top:30px;
+}
+
+.about-container{
+  flex-direction:column;
+}
+
+.about-text,
+.about-info{
+  width:100%;
+}
+
+.nav-links{
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+}
